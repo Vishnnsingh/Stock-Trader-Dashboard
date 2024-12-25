@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stocks Trader Dashboard</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   
+    <header>
+        <h1>Stock Trader Dashboard</h1>
+    </header>
+  <div class="main-content">
+    <section class="input-section">
+        <select name="" id="currency">
+            <option value="">Select Stock</option>
+            <option value="AAPL">AAPL</option>
+            <option value="GOOGL">GOOGL</option>
+            <option value="MSFT">MSFT</option>
+            <option value="AMZN">AMZN</option>
+            <option value="TSLA">TSLA</option>
+            <option value="FB">FB</option>
+            <option value="NFLX">NFLX</option>
+            <option value="NVDA">NVDA</option>
+            <option value="BABA">BABA</option>
+            <option value="INTC">INTC</option>
+        </select>
+
+        <select name="" id="TF">
+            <option value="minute">Select Time Frame</option>
+            <option value="month">Monthly</option>
+            <option value="week">Weekly</option>
+            <option value="day">Daily</option>
+            <option value="hour">Hour</option>
+            <option value="second">Second</option>
+        </select>
+
+        <input type="date" class="From-date">
+        <input type="date" class="To-date">
+       <button class="btn">Load Data</button>
+    </section>
+    <section class="search-section">
+        <input type="text" placeholder="Search stocks.." class="search">
+        <button class="searchBtn">search</button>
+    </section>
+
+    <main class="main">
+        <div class="chart-section">
+            <div >
+                <h1  class="chart-header">Stock Price Graph of <span class="stock-name-graph"></span> </h1>
+            </div>
+           <div class="chart-div">
+           
+           </div>
+              
+        </div>
+       <div class="table">
+        <h2 id="ss">Stock Information</h2>
+        <table>
+            <thead>
+                <th>Currency</th>
+                <th> <span class="open"></span> Opening Data</th>
+                <th><span class="close"></span> Closing Data</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="stock-name" rowspan="8"></td>
+                    <td>Open : <span class="op_open">0</span></td>
+                    <td>Open : <span class="cls_open"> 0</span></td>
+                </tr>
+                <tr>
+                    <td>Close : <span class="op_close">0</span></td>
+                    <td>Close : <span class="cls_close">0</span></td>
+                </tr>
+                <tr>
+                    <td>High : <span class="op_high">0</span></td>
+                    <td>High : <span class="cls_high">0</span></td>
+                </tr>
+                <tr>
+                    <td>Low : <span class="op_low">0</span></td>
+                    <td>Low : <span class="cls_low">0</span></td>
+                </tr>
+                <tr>
+                    <td>No.of Trans : <span class="op_n">0</span></td>
+                    <td>No.of Trans : <span class="cls_n">0</span></td>
+                </tr>
+                <tr>
+                    <td>Volume : <span class="op_vol">0</span></td>
+                    <td>Volume : <span class="cls_vol">0</span></td>
+                </tr>
+                <tr>
+                    <td>Avg Price : <span class="op_avg">0</span></td>
+                    <td>Avg Price : <span class="cls_avg">0</span></td>
+                </tr>
+              
+
+            </tbody>
+        </table>
+       </div>
+
+       
+    </main>
+    <main class="compare">
+        <h1>Compare Stocks</h1>
+        <table>
+            <thead>
+                <th>Stock</th>
+                <th>Price</th>
+                <th>Change</th>
+                <th>Volume</th>
+            </thead>
+            <tbody class="table-body">
+                
+
+            </tbody>
+        </table>
+    </main>
+     
+  </div>
+
+    <script src="./script.js">
+    </script>
+</body>
+</html>

@@ -1,0 +1,297 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    background: rgb(238,174,202);
+background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+header{
+    width: 40%;
+    height: 8vh;
+    display: grid;
+    place-items:center;
+    place-items: left;
+    padding-left: 50px;
+    background: rgb(47,82,84);
+    background: linear-gradient(90deg, rgba(47,82,84,1) 0%, rgba(195,25,123,1) 63%, rgba(252,176,69,1) 100%);
+    border-bottom: 1px solid grey;
+    border-bottom-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+    position: fixed;
+    top: 0;
+}
+
+.input-section {
+    display:flex;
+    margin-top: 50px;
+    align-items: center;
+    justify-content: center;
+    background-color: #A8EB12;
+    gap: 3rem;
+width: 100%;
+height: 10vh;
+/* border-radius: 50px; */
+border-top-left-radius: 50px;
+border-top-right-radius: 50px;
+
+
+
+}
+
+.stock-name{
+    font-weight: bold;
+}
+
+.input-section select , input,button{
+    width: 180px;
+    height:40px;
+    border: none;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    font-size: 1rem;
+    padding: 0 2rem ;
+}
+
+.main{
+    width: 100%;
+    /* height: 60vh; */
+    gap: 3rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    /* background-color: red; */
+}
+
+.input-section{
+    margin-bottom: 2rem;
+
+}
+
+.compare h1{
+    margin: 2rem 0;
+}
+
+.input-section button{
+    width: 200px;
+ background-color: #051937;
+    color: white;
+    /* border: 1px solid rgb(255, 255, 255); */
+    box-shadow: 0 0 10px rgb(107, 107, 107);
+}
+
+
+.search-section{
+    width: 40%;
+    margin: auto;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 2rem ;
+
+}
+
+.search-section button{
+    width: 150px;
+    background-color: #051937;
+     color: white;
+     font-weight: bold;
+     box-shadow: 0 0 10px grey;
+}
+
+
+
+table td,th , table{
+   border: 1px solid rgb(255, 255, 255);
+   border-collapse: collapse;
+}
+
+table td,th {
+padding: 1rem 2rem;
+text-align: center;
+}
+
+.chart_inner{
+    width: 90%;
+    margin: auto;
+}
+
+.chart-div{
+    width: 100%;
+    margin: auto;
+    /* height: 90vh;/ */
+}
+
+#ss{
+    color: red;
+}
+
+
+.chart-section h1{
+   font-size: 2rem;
+}
+
+table th{
+    background-color: #051937;
+}
+
+.table{
+    width: 40%;
+    /* display: grid;
+    place-items: center; */
+    height: 100%;
+    /* background-color: red; */
+    /* margin-left: 5rem; */
+    background-color: rgba(128, 128, 128, 0.186);
+    padding: 2rem;
+    border-radius: 20px;
+}
+
+
+
+.table h2{
+    margin-bottom: 2rem  ;
+    font-size: 2rem;
+}
+
+.main-content{  
+    padding: 2rem;
+    padding-bottom: 4rem;
+}
+
+.chart-section{
+    width: 65%;
+background-color: rgba(128, 128, 128, 0.186);
+padding: 1rem;
+border-radius: 20px;
+
+/* display: grid;
+    place-items: center; */
+}
+
+.chart-header{
+    /* margin-top: 6rem; */
+    color: red;
+}
+
+.compare {
+    width : 100%;
+    margin: auto;
+    background-color: rgba(128, 128, 128, 0.186);
+    padding: 2rem;
+    margin-top: 2rem;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.compare h1{
+    color: red;
+}
+
+select option{
+    background-color: #051937;
+    color: aliceblue;
+    border: 2px solid;
+    border-radius: 50px;
+}
+.compare table{
+    width: 100%;
+}
+
+@media  screen and (max-width: 950px) {
+     .main{
+        flex-direction: column;
+     }
+
+     .table{
+        width: 100%;
+     }
+
+     .table table{
+        width: 100%;
+     }
+
+     .chart-section{
+        width: 100%;
+     }
+
+     .input-section{
+       flex-wrap: wrap;
+       height: 20vh;
+     }
+
+     .search-section{
+        width: 90%;
+     }
+
+     
+}
+
+
+@media screen and (max-width : 600px) {
+    .input-section{
+        height: 50vh;
+        gap: 3rem;
+    }
+
+    header h1{
+        font-size: 1.5rem;
+    }
+
+    .input-section input,select::placeholder{
+        font-size: 1rem;
+    }
+
+    .input-section select{
+        font-size: 1rem;
+    }
+
+    .input-section button{
+        font-size: 1rem;
+    }
+
+    .search-section input::placeholder{
+        font-size: 1rem;
+    }
+
+    .search-section button{
+        font-size: 1rem;
+    }
+
+    .table h2{
+          font-size: 1.5rem;
+    }
+
+    table td,tr{
+        font-size:0.9rem;
+    }
+
+    .chart-section h1{
+        font-size: 1.5rem;
+    }
+
+    .compare h1{
+        font-size: 1.5rem;
+     margin: 1rem;
+    }
+
+    .compare table td{
+        padding: 0.8rem;
+    }
+    /* .compare{
+    padding: 1rem;
+    } */
+}
+
